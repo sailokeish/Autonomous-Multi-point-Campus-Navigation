@@ -114,7 +114,8 @@ ros2 run warehouse_tsp christofides_20pt
 
 Some waypoints had to be manually tuned to stay clear of walls. Nav2's costmap inflation (~0.3m) will reject goals that are too close to obstacles. The coordinates in the algorithm files already account for this.
 
-## Contributors
+## Team
 
-- [sailokeish](https://github.com/sailokeish)
-- Clifford Co (clifford.co@northeastern.edu) <!-- add GitHub link when available -->
+- Gagansri Pyerddy -— [Gagansri](https://github.com/pyreddy-g)
+- Sailokeish Tenneti — [sailokeish](https://github.com/sailokeish)
+- Clifford Cody
