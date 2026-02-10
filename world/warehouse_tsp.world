@@ -2,27 +2,6 @@
 <sdf version="1.6">
   <world name="northeastern_campus_scaled">
     
-    <!-- ============================================================ -->
-    <!-- NORTHEASTERN CAMPUS - 50% SCALED VERSION                     -->
-    <!-- All positions and sizes reduced by 0.5x                      -->
-    <!-- Buildings closer together but NO overlaps                    -->
-    <!-- Same structure and alignment preserved                       -->
-    <!--                                                              -->
-    <!-- Original bounds: x[-12,17] y[-4,22] = 29m × 26m              -->
-    <!-- New bounds: x[-5.5,8.5] y[-1.5,10.5] = 14m × 12m             -->
-    <!--                                                              -->
-    <!-- STRUCTURE (same as original, just smaller):                  -->
-    <!--                                                              -->
-    <!--   LEFT COLUMN:         RIGHT COLUMN:      FAR RIGHT:         -->
-    <!--   Curry (-1.5, 7)      Snell Lib (3, 8.5) Snell Eng (6, 8.5) -->
-    <!--      |                     |              Churchill (6, 5.5) -->
-    <!--   Ell (-1.5, 4)        Richards (3, 2.5)                     -->
-    <!--                            |                                 -->
-    <!--   Dodge (-3.5, 0) ○ QUAD  |                                  -->
-    <!--                   (0,0)───┘                                  -->
-    <!--                                                              -->
-    <!-- ============================================================ -->
-    
     <!-- Physics settings - can increase real_time_update_rate for faster sim -->
     <physics type="ode">
       <real_time_update_rate>1000.0</real_time_update_rate>
@@ -57,13 +36,7 @@
       <background>0.7 0.85 1.0 1</background>
       <shadows>true</shadows>
     </scene>
-    
-    <!-- ============================================================ -->
-    <!-- GROUND PLANE                                                 -->
-    <!-- Covers: x[-5.5, 8.5], y[-1.5, 10.5] = 14m × 12m              -->
-    <!-- Centered at (1.5, 4.5)                                       -->
-    <!-- ============================================================ -->
-    
+
     <model name="campus_ground">
       <static>true</static>
       <pose>1.5 4.5 0 0 0 0</pose>
@@ -92,13 +65,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- BOUNDARY WALLS                                               -->
-    <!-- Rectangle: x[-5.5, 8.5], y[-1.5, 10.5]                       -->
-    <!-- Wall thickness: 0.2m, Height: 1.0m                           -->
-    <!-- ============================================================ -->
-    
+
     <!-- North Wall (y = 10.5) -->
     <model name="wall_north">
       <static>true</static>
@@ -170,12 +137,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- QUAD - VISUAL ONLY (no collision)                            -->
-    <!-- Position: (0, 0) - ORIGIN / Robot spawn point                -->
-    <!-- Original radius: 1.33m → Scaled: 0.67m                       -->
-    <!-- ============================================================ -->
+
     
     <model name="quad_path">
       <static>true</static>
@@ -214,13 +176,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- DODGE HALL                                                   -->
-    <!-- Original: (-7, 0), size 4.0×1.73                             -->
-    <!-- Scaled: (-3.5, 0), size 2.0×0.87                             -->
-    <!-- Extents: x[-4.5, -2.5], y[-0.44, 0.44]                       -->
-    <!-- ============================================================ -->
+
     
     <model name="dodge_hall">
       <static>true</static>
@@ -238,13 +194,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- ELL HALL                                                     -->
-    <!-- Original: (-3, 8), size 3.14×4.67                            -->
-    <!-- Scaled: (-1.5, 4.0), size 1.57×2.34                          -->
-    <!-- Extents: x[-2.29, -0.72], y[2.83, 5.17]                      -->
-    <!-- ============================================================ -->
+
     
     <model name="ell_hall">
       <static>true</static>
@@ -262,13 +212,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- RICHARDS HALL                                                -->
-    <!-- Original: (6, 5), size 2.8×8.87                              -->
-    <!-- Scaled: (3.0, 2.5), size 1.4×4.44                            -->
-    <!-- Extents: x[2.3, 3.7], y[0.28, 4.72]                          -->
-    <!-- ============================================================ -->
+
     
     <model name="richards_hall">
       <static>true</static>
@@ -287,12 +231,6 @@
       </link>
     </model>
     
-    <!-- ============================================================ -->
-    <!-- CURRY STUDENT CENTER                                         -->
-    <!-- Original: (-3, 14), size 3.0×3.73                            -->
-    <!-- Scaled: (-1.5, 7.0), size 1.5×1.87                           -->
-    <!-- Extents: x[-2.25, -0.75], y[6.07, 7.94]                      -->
-    <!-- ============================================================ -->
     
     <model name="curry">
       <static>true</static>
@@ -338,13 +276,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- SNELL LIBRARY                                                -->
-    <!-- Original: (6, 17), size 4.33×4.4                             -->
-    <!-- Scaled: (3.0, 8.5), size 2.17×2.2                            -->
-    <!-- Extents: x[1.92, 4.09], y[7.4, 9.6]                          -->
-    <!-- ============================================================ -->
+
     
     <model name="snell_library">
       <static>true</static>
@@ -390,13 +322,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- CHURCHILL HALL                                               -->
-    <!-- Original: (12, 11), size 1.33×3.27                           -->
-    <!-- Scaled: (6.0, 5.5), size 0.67×1.64                           -->
-    <!-- Extents: x[5.67, 6.34], y[4.68, 6.32]                        -->
-    <!-- ============================================================ -->
+
     
     <model name="churchill_hall">
       <static>true</static>
@@ -414,13 +340,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- SNELL ENGINEERING                                            -->
-    <!-- Original: (12, 17), size 6.0×2.0                             -->
-    <!-- Scaled: (6.0, 8.5), size 3.0×1.0                             -->
-    <!-- Extents: x[4.5, 7.5], y[8.0, 9.0]                            -->
-    <!-- ============================================================ -->
+
     
     <model name="snell_engineering">
       <static>true</static>
@@ -438,12 +358,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- PATHWAYS - VISUAL ONLY (no collision)                        -->
-    <!-- All scaled by 0.5x                                           -->
-    <!-- ============================================================ -->
-    
+
     <!-- Dodge to Quad -->
     <model name="path_dodge_quad">
       <static>true</static>
@@ -593,10 +508,7 @@
         </visual>
       </link>
     </model>
-    
-    <!-- ============================================================ -->
-    <!-- WAYPOINT MARKERS - VISUAL ONLY                               -->
-    <!-- ============================================================ -->
+
     
     <!-- QUAD marker - Green (spawn point) -->
     <model name="marker_QUAD">
