@@ -36,15 +36,7 @@ Visit 8 building entrances and return to start, minimizing total distance. Class
 
 The MST lower bound is ~21.08m, so both solutions are pretty close to theoretical best.
 
-### Map Generation 
-![slam](media/slam.mp4)
-
-### Christofides
-![Christofides Demo](media/christofides_demo.mp4)
-
-### Christofides + 2-opt
-![2-opt Demo](media/christofides_2opt_demo.mp4)
-
+Demo videos available in the [`media/`](media/) folder.
 ## Prerequisites
 
 - Ubuntu 22.04
